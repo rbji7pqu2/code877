@@ -29,7 +29,7 @@ $(function () {
             self.toggleClass('edit');
             $shortId.prop('placeholder', $placeholder_old);
             $mailUser = $shortId.val();
-            var mailaddress = $mailUser + '@' + "code877.com";
+            var mailaddress = $mailUser + '@' + "ihotmails.com";
             setMailAddress($mailUser);
             $shortId.val(mailaddress);
             window.location.reload();
@@ -51,11 +51,11 @@ $(function () {
         Prism.highlightAll();
     });
 
-    var socket = io("http://code877.com");
+    var socket = io("https://ihotmails.com");
 
 var setMailAddress = function (id) {
     localStorage.setItem('shortid', id);
-    var mailaddress = id + '@' + 'code877.com';
+    var mailaddress = id + '@' + 'ihotmails.com';
     $('#shortid').val(mailaddress).parent().siblings('button').find('.mail').attr('data-clipboard-text', mailaddress);
 };
 
